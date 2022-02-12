@@ -4,10 +4,11 @@ import Button from "./button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLongArrowUp,
-  faLongArrowDown
+  faLongArrowDown,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { forwardRef } from "react";
+
 
 export default forwardRef(function ScrollCard(props, ref) {
   return (
@@ -24,20 +25,22 @@ export default forwardRef(function ScrollCard(props, ref) {
               props.prevRef.current.scrollIntoView({ behavior: "smooth" })
             }
           >
-            <FontAwesomeIcon icon={faLongArrowUp} />
+            <FontAwesomeIcon icon={faLongArrowUp} className="text-slate-600" />
           </Button>
         ) : null}
       </div>
-      <div className="max-w-sm">
+      <div className="max-w-sm border border-solid border-white rounded-md">
         <Image
+          className="rounded-md"
           src="/test.jpeg"
           width={6}
           height={9}
           layout="responsive"
           quality={100}
+          alt="pic"
         />
-        <p>{props.text}</p>
       </div>
+        <p>{props.text}</p>
 
       <div>
         {props.nextButton ? (
@@ -46,7 +49,7 @@ export default forwardRef(function ScrollCard(props, ref) {
               props.nextRef.current.scrollIntoView({ behavior: "smooth" })
             }
           >
-            <FontAwesomeIcon icon={faLongArrowDown} />
+            <FontAwesomeIcon icon={faLongArrowDown} className="text-slate-600"/>
           </Button>
         ) : null}
       </div>
