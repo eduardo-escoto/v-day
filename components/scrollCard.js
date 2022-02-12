@@ -3,7 +3,6 @@ import Button from "./button";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faC,
   faLongArrowUp,
   faLongArrowDown
 } from "@fortawesome/free-solid-svg-icons";
