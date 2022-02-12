@@ -51,26 +51,36 @@ export default function Home() {
 //     <button onClick={() => {console.log(refs.current)}}>ef</button>
 //   </ul>)
 // }
-const ScrollCardTest = React.forwardRef((props, ref) => (
-  <div
-    ref={ref}
-    // style={{ backgroundColor: bg_color }}
-    className="p-12 text-3xl flex flex-col text-center justify-center snap-start min-h-full"
-    id={props.id}
-  >
-    <Image src="/test.jpeg" width={400} height={600} />
-    <p>{props.text}</p>
-    <div>
-      {props.prevButton ? <Button>Previous</Button> : null}
-      {props.nextButton ? (
-        <Button
-          onClick={() =>
-            props.nextRef.current.scrollIntoView({ behavior: "smooth" })
-          }
-        >
-          Next
-        </Button>
-      ) : null}
+const ScrollCardTest = React.forwardRef(function ScrollCard(props, ref) {
+  return (
+    <div
+      ref={ref}
+      // style={{ backgroundColor: bg_color }}
+      className="p-12 text-3xl flex flex-col text-center justify-center snap-start min-h-full"
+      id={props.id}
+    >
+      <Image src="/test.jpeg" width={400} height={600} />
+      <p>{props.text}</p>
+      <div>
+        {props.prevButton ? (
+          <Button
+            onClick={() =>
+              props.prevRef.current.scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            Previous
+          </Button>
+        ) : null}
+        {props.nextButton ? (
+          <Button
+            onClick={() =>
+              props.nextRef.current.scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            Next
+          </Button>
+        ) : null}
+      </div>
     </div>
-  </div>
-));
+  );
+});
