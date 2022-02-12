@@ -9,19 +9,18 @@ import {
 
 import { forwardRef } from "react";
 
-// overflow y - with scrolling in card, next and bottom fixed.
 
 export default forwardRef(function ScrollCard(props, ref) {
   return (
     <div
       style={props.cardStyle}
       ref={ref}
-      className="relative border-x-2 border-pink-100 max-w-md px-10 py-6 text-xl flex flex-col text-center justify-center max-h-screen overflow-y-auto"
+      className="border-x-2 border-pink-100 max-w-md px-10 py-6 text-xl flex flex-col text-center justify-center"
       id={props.id}
     >
       <div className="min-h-full">
-        <div>
-          {props.prevButton ? (
+        {props.prevButton ? (
+          <div>
             <Button
               onClick={() =>
                 props.prevRef.current.scrollIntoView({ behavior: "smooth" })
@@ -32,9 +31,9 @@ export default forwardRef(function ScrollCard(props, ref) {
                 className="text-slate-600"
               />
             </Button>
-          ) : null}
-        </div>
-        <div className="max-w-sm border border-solid border-white rounded-md">
+          </div>
+        ) : null}
+        <div className="max-w-sm border border-solid border-white rounded-md my-4">
           <Image
             className="rounded-md"
             src="/test.jpeg"
@@ -45,7 +44,7 @@ export default forwardRef(function ScrollCard(props, ref) {
             alt="pic"
           />
         </div>
-        <div className="max-w-sm border border-solid border-white rounded-md">
+        <div className="max-w-sm border border-solid border-white rounded-md my-4">
           <Image
             className="rounded-md"
             src="/test.jpeg"
@@ -58,8 +57,8 @@ export default forwardRef(function ScrollCard(props, ref) {
         </div>
         <p>{props.text}</p>
 
-        <div className="mb-2">
-          {props.nextButton ? (
+        {props.nextButton ? (
+          <div className="mb-2">
             <Button
               onClick={() =>
                 props.nextRef.current.scrollIntoView({ behavior: "smooth" })
@@ -70,8 +69,8 @@ export default forwardRef(function ScrollCard(props, ref) {
                 className="text-slate-600"
               />
             </Button>
-          ) : null}
-        </div>
+          </div>
+        ) : null}
       </div>
     </div>
   );
