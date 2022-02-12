@@ -13,9 +13,10 @@ import { forwardRef } from "react";
 export default forwardRef(function ScrollCard(props, ref) {
   return (
     <div
-      style={props.cardStyle}
+      style={{...props.cardStyle, minHeight:"95vh"}}
       ref={ref}
-      className="border-x-2 border-pink-100 max-w-md p-12 text-xl flex flex-col text-center justify-center min-h-screen"
+      className="border-x-2 border-pink-100 max-w-md p-12 text-xl flex flex-col text-center justify-center"
+
       id={props.id}
     >
       <div>
