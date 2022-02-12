@@ -9,13 +9,15 @@ import {
 
 import { forwardRef } from "react";
 
+// TODO:
+// Add the content and photos. Going to stick with this layout.
 
 export default forwardRef(function ScrollCard(props, ref) {
   return (
     <div
       style={props.cardStyle}
       ref={ref}
-      className="border-x-2 border-pink-100 max-w-md px-10 py-6 text-xl flex flex-col text-center justify-center"
+      className="border-x-2 border-y border-pink-100 max-w-md px-10 py-6 text-xl flex flex-col text-center justify-center"
       id={props.id}
     >
       <div className="min-h-full">
@@ -33,18 +35,30 @@ export default forwardRef(function ScrollCard(props, ref) {
             </Button>
           </div>
         ) : null}
-        <div className="max-w-sm border border-solid border-white rounded-md my-4">
-          <Image
-            className="rounded-md"
-            src="/test.jpeg"
-            width={3}
-            height={4}
-            layout="responsive"
-            quality={100}
-            alt="pic"
-          />
+        <div className="mb-4">
+          <h1 className="text-3xl">{props.title}</h1>
         </div>
-        <p>{props.text}</p>
+        {props.imagePaths
+          ? props.imagePaths.map((path, idx) => (
+              <div
+                key={idx}
+                className="max-w-sm border border-solid border-white rounded-md my-4"
+              >
+                <Image
+                  className="rounded-md"
+                  src={path}
+                  width={3}
+                  height={4}
+                  layout="responsive"
+                  quality={100}
+                  alt="pic"
+                />
+              </div>
+            ))
+          : null}
+        <div className="text-left text-sm">
+          <p>{props.text}</p>
+        </div>
 
         {props.nextButton ? (
           <div className="mb-2">
