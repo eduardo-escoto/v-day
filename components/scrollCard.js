@@ -17,7 +17,7 @@ export default function ScrollCard(props) {
     <div
       ref={ref}
       style={{ backgroundColor: bg_color }}
-      className="p-12 text-3xl flex flex-col text-center justify-center snap-start min-h-full"
+      className="p-12 text-3xl flex flex-col text-center justify-center min-h-full"
       id={props.id}
     >
       <Image src="/test.jpeg" width={400} height={600} />

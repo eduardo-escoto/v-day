@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="flex">
       <div
-        className="basis-full max-h-screen overflow-y-scroll border border-solid border-gray-400 snap-proximity snap-y"
+        className="basis-full max-h-screen overflow-y-scroll border border-solid border-gray-400"
         // style={{backgroundColor: {randomColor({ luminosity: "light" })}}}
       >
         {ind.map((v, i) => {
@@ -56,7 +56,7 @@ const ScrollCardTest = React.forwardRef(function ScrollCard(props, ref) {
     <div
       ref={ref}
       // style={{ backgroundColor: bg_color }}
-      className="p-12 text-3xl flex flex-col text-center justify-center snap-start min-h-full"
+      className="p-12 text-3xl flex flex-col text-center justify-center min-h-full"
       id={props.id}
     >
       <Image src="/test.jpeg" width={400} height={600} priority={true} />
