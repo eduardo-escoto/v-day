@@ -59,7 +59,7 @@ const ScrollCardTest = React.forwardRef(function ScrollCard(props, ref) {
       className="p-12 text-3xl flex flex-col text-center justify-center snap-start min-h-full"
       id={props.id}
     >
-      <Image src="/test.jpeg" width={400} height={600} />
+      <Image src="/test.jpeg" width={400} height={600} priority={true} />
       <p>{props.text}</p>
       <div>
         {props.prevButton ? (
