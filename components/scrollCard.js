@@ -44,17 +44,6 @@ export default forwardRef(function ScrollCard(props, ref) {
             alt="pic"
           />
         </div>
-        <div className="max-w-sm border border-solid border-white rounded-md my-4">
-          <Image
-            className="rounded-md"
-            src="/test.jpeg"
-            width={3}
-            height={4}
-            layout="responsive"
-            quality={100}
-            alt="pic"
-          />
-        </div>
         <p>{props.text}</p>
 
         {props.nextButton ? (
