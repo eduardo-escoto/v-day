@@ -1,5 +1,9 @@
 import ScrollCard from "../components/scrollCard";
 import { useRef, createRef, useEffect } from "react";
+import ReactPlayer from "react-player"
+function dimsFromAspectRatio(width = 300, ar = 4 / 3) {
+  return { height: ar * width, width };
+}
 
 const cardData = [
   {
@@ -19,8 +23,18 @@ const cardData = [
     and how much fun it was talking while we painted. It was so funny how much of a trouble we went through to take 
     a polaroid pic.
     `,
-    imagePaths: ["/test.jpeg", "/test.jpeg"],
-    date: new Date(2020, 12, 6),
+    media: [
+      { path: "/first_hangout/polaroid.jpeg" },
+      { path: "/first_hangout/shelf_photo.jpeg" },
+    ],
+    date: new Date(2020, 11, 4),
+  },
+  {
+    title: "Our First Valentine's Day",
+    text: "fsoidjfoi",
+    // media: [{ path: "/v_day_2021/marshalls.jpeg" }],
+    media: [{ path: "/test.mov", type:'video' }],
+    date: new Date(2021, 1, 14),
   },
 ];
 

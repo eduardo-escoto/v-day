@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Button from "./button";
-
+import ReactPlayer from "react-player";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLongArrowUp,
@@ -21,7 +21,7 @@ export default forwardRef(function ScrollCard(props, ref) {
       className="border-x-2 border-y border-pink-100 max-w-md px-3 py-6 text-xl flex flex-col text-center justify-center"
       id={props.id}
     >
-      <div className="min-h-full bg-pink-100 border border-solid border-pink-300 rounded-lg shadow-xl py-3">
+      <div className="p-4 min-h-full bg-pink-100 border border-solid border-pink-300 rounded-lg shadow-xl">
         {props.prevButton ? (
           <div className="">
             <Button
@@ -50,19 +50,19 @@ export default forwardRef(function ScrollCard(props, ref) {
             </h4>
           ) : null}
         </div>
-        {props.imagePaths ? (
-          props.imagePaths.length > 1 ? (
+        {props.media ? (
+          props.media.length > 1 ? (
             <div className="w-11/12 flex gap-4 snap-x snap-mandatory overflow-x-auto ml-auto mr-auto">
-              {props.imagePaths.map((path, idx) => (
+              {props.media.map((media, idx) => (
                 <div
                   key={idx}
                   className="snap-center shrink-0 first:pl-4 last:pr-4"
                 >
                   <Image
                     className="shrink-0 w-fit rounded-lg"
-                    src={path}
-                    height={400}
-                    width={300}
+                    src={media.path}
+                    height={media.height || 400}
+                    width={media.width || 300}
                     alt="Picture"
                   />
                 </div>
@@ -70,13 +70,31 @@ export default forwardRef(function ScrollCard(props, ref) {
             </div>
           ) : (
             <div key={0} className="w-full ml-auto mr-auto">
-              <Image
-                className="shrink-0 w-fit rounded-lg"
-                src={props.imagePaths[0]}
-                height={400}
-                width={300}
-                alt="Picture"
-              />
+              {props.media[0].type === "video" ? (
+                <ReactPlayer
+                  loop={true}
+                  light={true}
+                  controls={true}
+                  url={props.media[0].path}
+                  height={props.media[0].height || 400}
+                  width={props.media[0].width || 300}
+                  className="shrink-0 w-fit rounded-lg"
+                  style={{
+                    margin: "0 auto",
+                    borderTopLeftRadius: "0.25rem",
+                    borderBottomLeftRadius: "0.25rem",
+                    overflow: "hidden",
+                  }}
+                />
+              ) : (
+                <Image
+                  className="shrink-0 w-fit rounded-lg"
+                  src={props.media[0].path}
+                  height={props.media[0].height || 400}
+                  width={props.media[0].width || 300}
+                  alt="Picture"
+                />
+              )}
             </div>
           )
         ) : null}
