@@ -10,18 +10,18 @@ import {
 import { forwardRef } from "react";
 
 // TODO:
-// Add the content and photos. Going to stick with this layout.
-// maybe go back to snap scroll and add x overflow for pics? def for now, add content and cute gifs n shit
+// Add all the content 
+// Add cute gifs n shit
 
 export default forwardRef(function ScrollCard(props, ref) {
   return (
     <div
       style={props.cardStyle}
       ref={ref}
-      className="border-x-2 border-y border-pink-100 max-w-md px-3 py-6 text-xl flex flex-col text-center justify-center"
+      className=" max-w-md px-3 py-6 text-xl flex flex-col text-center justify-center"
       id={props.id}
     >
-      <div className="p-4 min-h-full bg-pink-100 border border-solid border-pink-300 rounded-lg shadow-xl">
+      <div className="p-4 min-h-full bg-pink-100 border-2  border-solid border-pink-300 rounded-lg shadow-xl">
         {props.prevButton ? (
           <div className="">
             <Button

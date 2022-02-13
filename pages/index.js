@@ -29,20 +29,23 @@ const cardData = [
     ],
     date: new Date(2020, 11, 4),
   },
-  {
-    title: "Our First Valentine's Day",
-    text: "fsoidjfoi",
-    // media: [{ path: "/v_day_2021/marshalls.jpeg" }],
-    media: [{ path: "/test.mov", type:'video' }, {path: "/first_hangout/shelf_photo.jpeg" }],
-    date: new Date(2021, 1, 14),
+  {title: "I tell you I like you.",
+  text: `
+  I... I was not smooth at all with this. 
+  I really thought you just didn't like me for like the next 10 minutes while we tried to figure it all out. 
+  10 minutes of dejection and being like "AHHHHHHHH FUUUUUKKKKK".
+  Look at us now though, so maybe that was smooth of me ;) 
+  `,
+  date: new Date(2020, 11, 14),
+  media: [{path:"/admission/admit.jpg", ...dimsFromAspectRatio(300, 19.5/9)}]
   },
   {
     title: "Our First Valentine's Day",
-    text: "fsoidjfoi",
+    text: "The first time we hung out as ",
     // media: [{ path: "/v_day_2021/marshalls.jpeg" }],
-    media: [{ path: "/test.mov", type:'video' }],
+    // media: [{ path: "/test.mov", type:'video' }, {path: "/first_hangout/shelf_photo.jpeg" }],
     date: new Date(2021, 1, 14),
-  },
+  }
 ];
 
 export default function Home() {
@@ -70,7 +73,7 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <div className="max-w-md  mx-auto text-center py-4 border-x-2 border-y border-pink-100">
+      <div className="max-w-md  mx-auto text-center py-4 ">
         <p>Made with Love by Eduardo Escoto.</p>
       </div>
     </>
