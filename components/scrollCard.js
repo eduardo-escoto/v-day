@@ -40,30 +40,37 @@ export default forwardRef(function ScrollCard(props, ref) {
           <h1 className="text-3xl">{props.title}</h1>
         </div>
         {props.imagePaths ? (
-          <div className="relative w-full flex gap-6 snap-x snap-mandatory overflow-x-auto pb-10">
-            {props.imagePaths.map((path, idx) => (
-              <div
-                key={idx}
-                className="snap-center shrink-0 first:pl-4 last:pr-4"
-              >
-                <Image
-                  className="shrink-0 w-fit rounded-lg shadow-xl bg-white"
-                  src={path}
-                  height={400}
-                  width={300}
-                />
-                {/* <Image
-                  className=""
-                  src={path}
-                  width={3}
-                  height={4}
-                  layout="responsive"
-                  quality={100}
-                  alt="pic"
-                /> */}
-              </div>
-            ))}
-          </div>
+          props.imagePaths.length > 0 ? (
+            <div className="w-full flex gap-6 snap-x snap-mandatory overflow-x-auto mb-10">
+              {props.imagePaths.map((path, idx) => (
+                <div
+                  key={idx}
+                  className="snap-center shrink-0 first:ml-5 last:mr-5 p-0"
+                >
+                  <Image
+                    className="shrink-0 w-fit rounded-lg shadow-xl bg-white p-0 m-0"
+                    src={path}
+                    height={400}
+                    width={300}
+                    alt="Pictue"
+                  />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div
+              key={0}
+              // className="snap-center shrink-0 first:ml-5 last:mr-5 p-0"
+            >
+              <Image
+                // className="shrink-0 w-fit rounded-lg shadow-xl bg-white p-0 m-0"
+                src={props.imagePaths[0]}
+                height={400}
+                width={300}
+                alt="Pictue"
+              />
+            </div>
+          )
         ) : null}
         <div className="text-left text-sm mb-5 px-4">
           <p>{props.text}</p>
