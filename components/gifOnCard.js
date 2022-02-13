@@ -8,12 +8,12 @@ export default function GifOnCard(props) {
     <div className="relative"
       ref={divRef}
       quality={100}
-      style={{
-        width: props.width || "50px",
-        height: props.height || "50px"
-      }}
+      // style={{
+      //   width: props.width || "50px",
+      //   height: props.height || "50px"
+      // }}
     >
-      <Image src={props.path} layout="fill" alt="gif" priority={true} />
+      <Image src={props.path} height={props.height || 50} width={props.width || 50} alt="gif" priority={true} />
     </div>
   );
 }

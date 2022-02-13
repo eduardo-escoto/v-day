@@ -12,12 +12,67 @@ const cardData = [
     I can't believe its already Valentine's Day! Time really flies. 
     We've had so many great memories through out all this time we've known each other, 
     so I thought it'd be cute to walk down memory lane.`,
-    date: new Date(),
+    date: new Date(2022, 1, 13),
+    gifs: [
+      { path: "/gifs/milk-and-mocha-cute (7).gif" },
+      { path: "/gifs/milk-and-mocha-cute (13).gif" },
+      { path: "/gifs/milk-and-mocha (3).gif" },
+      { path: "/gifs/love-cat.gif" },
+    ],
+  },
+  {
+    title: "I tell you I like you.",
+    text: `
+  I... I was not smooth at all with this. 
+  I really thought you just didn't like me for like the next 10 minutes while we tried to figure it all out. 
+  10 minutes of dejection and being like "AHHHHHHHH FUUUUUKKKKK".
+  Look at us now though, so maybe that was smooth of me ;) 
+  `,
+    date: new Date(2020, 11, 14),
+    media: [
+      { path: "/admission/admit.jpg", ...dimsFromAspectRatio(300, 19.5 / 9) },
+    ],
     gifs: [
       { path: "/gifs/cat-love.gif" },
       { path: "/gifs/cat-peach.gif" },
       { path: "/gifs/iklog.gif" },
       { path: "/gifs/dap.gif" },
+    ],
+  },
+  {
+    title: "The Milk and Money Tour.",
+    text: `
+We finally had the chance to go to a comedy show! And what better act to see than one of our faves, Ali Wong!
+  `,
+    date: new Date(2021, 7, 24),
+    media: [
+      { path: "/ali_wong/IMG_5819.MOV.mp4", type:"video"},
+    ],
+    gifs: [
+      { path: "/gifs/milk-and-mocha-cute.gif" },
+      { path: "/gifs/milk-and-mocha (6).gif" },
+      { path: "/gifs/milk-mocha (2).gif" },
+      { path: "/gifs/milk-and-mocha-cute (6).gif" },
+    ],
+  },
+  {
+    title: "Disneyland!!! (again)",
+    text: `We go to Disneyland again! This time, the weather is better, we are more experienced, and we know exactly what we want to do!
+    We also don't push ourselves to the point of immense pain like the first time we were here. That day 2 at California Adventure was rough. 
+    This visit wasn't all great though because we tried to go to Coco Ichibanya after and we had the worst time LMAOOOO. You saw me get really angry fr fr for like the first time.
+    Very, very vulnerable.`,
+    date: new Date(2022, 0, 2),
+    media: [
+      { path: "/disney_v2/IMG_0711.JPEG" },
+      { path: "/disney_v2/IMG_0714.JPEG" },
+    ],
+    gifs: [
+      { path: "/gifs/milk-and-mocha (1).gif", width: 60 },
+      { path: "/gifs/milk-and-mocha (5).gif", width: 60 },
+      // { path: "/gifs/milk-mocha.gif"},
+      // { path: "/gifs/milk-and-mocha-cute (14).gif" },
+      { path: "/gifs/cat-love.gif" },
+      { path: "/gifs/cat-peach.gif" },
     ],
   },
   {
@@ -40,25 +95,7 @@ const cardData = [
       { path: "/gifs/dap.gif" },
     ],
   },
-  {
-    title: "I tell you I like you.",
-    text: `
-  I... I was not smooth at all with this. 
-  I really thought you just didn't like me for like the next 10 minutes while we tried to figure it all out. 
-  10 minutes of dejection and being like "AHHHHHHHH FUUUUUKKKKK".
-  Look at us now though, so maybe that was smooth of me ;) 
-  `,
-    date: new Date(2020, 11, 14),
-    media: [
-      { path: "/admission/admit.jpg", ...dimsFromAspectRatio(300, 19.5 / 9) },
-    ],
-    gifs: [
-      { path: "/gifs/cat-love.gif" },
-      { path: "/gifs/cat-peach.gif" },
-      { path: "/gifs/iklog.gif" },
-      { path: "/gifs/dap.gif" },
-    ],
-  },
+  
   {
     title: "Our First Valentine's Day",
     text: "The first time we hung out as ",
