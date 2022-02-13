@@ -41,11 +41,11 @@ export default forwardRef(function ScrollCard(props, ref) {
         </div>
         {props.imagePaths ? (
           props.imagePaths.length > 1 ? (
-            <div className="w-11/12 flex gap-4 snap-x snap-mandatory overflow-x-auto ml-auto mr-auto">
+            <div className="w-11/12 flex gap-5 snap-x snap-mandatory overflow-x-auto ml-auto mr-auto">
               {props.imagePaths.map((path, idx) => (
                 <div
                   key={idx}
-                  className="snap-center shrink-0 mx-5"
+                  className="snap-center shrink-0 px-3"
                 >
                   <Image
                     className="shrink-0 w-fit rounded-lg"
