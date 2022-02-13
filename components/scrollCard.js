@@ -38,6 +38,17 @@ export default forwardRef(function ScrollCard(props, ref) {
         ) : null}
         <div className="mb-3">
           <h1 className="text-4xl">{props.title}</h1>
+          {props.date ? (
+            <h4>
+              &mdash;{" "}
+              {props.date.toLocaleString("default", {
+                month: "long",
+                day: "numeric",
+                year: "numeric",
+              })}{" "}
+              &mdash;
+            </h4>
+          ) : null}
         </div>
         {props.imagePaths ? (
           props.imagePaths.length > 1 ? (
@@ -70,7 +81,7 @@ export default forwardRef(function ScrollCard(props, ref) {
           )
         ) : null}
         <div className="text-left mt-4 mb-2 mx-2 px-4">
-          <p className='text-base'>{props.text}</p>
+          <p className="text-base">{props.text}</p>
         </div>
 
         {props.nextButton ? (

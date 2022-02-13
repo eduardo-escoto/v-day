@@ -9,7 +9,7 @@ const cardData = [
     I can't believe its already Valentine's Day! Time really flies. 
     We've had so many great memories through out all this time we've known each other, 
     so I thought it'd be cute to walk down memory lane.`,
-    date: "2021",
+    date: new Date(),
   },
   {
     title: "Our First Hangout!",
@@ -20,12 +20,7 @@ const cardData = [
     a polaroid pic.
     `,
     imagePaths: ["/test.jpeg", "/test.jpeg"],
-    date: "2020-12-06",
-  },
-  {
-    title: "Kirby Griffin",
-    imagePaths: ["/test.jpeg"],
-    text: `We got stupid shirts -____-`,
+    date: new Date(2020, 12, 6),
   },
 ];
 
