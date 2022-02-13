@@ -21,9 +21,9 @@ export default forwardRef(function ScrollCard(props, ref) {
       className="border-x-2 border-y border-pink-100 max-w-md px-3 py-6 text-xl flex flex-col text-center justify-center"
       id={props.id}
     >
-      <div className="min-h-full">
+      <div className="min-h-full bg-pink-100 border border-solid border-pink-300 rounded-lg shadow-xl py-3">
         {props.prevButton ? (
-          <div>
+          <div className="">
             <Button
               onClick={() =>
                 props.prevRef.current.scrollIntoView({ behavior: "smooth" })
@@ -36,8 +36,8 @@ export default forwardRef(function ScrollCard(props, ref) {
             </Button>
           </div>
         ) : null}
-        <div className="mb-4">
-          <h1 className="text-3xl">{props.title}</h1>
+        <div className="mb-3">
+          <h1 className="text-4xl">{props.title}</h1>
         </div>
         {props.imagePaths ? (
           props.imagePaths.length > 1 ? (
@@ -69,12 +69,12 @@ export default forwardRef(function ScrollCard(props, ref) {
             </div>
           )
         ) : null}
-        <div className="text-left text-sm mt-4 mb-2 mx-2 px-4">
-          <p>{props.text}</p>
+        <div className="text-left mt-4 mb-2 mx-2 px-4">
+          <p className='text-base'>{props.text}</p>
         </div>
 
         {props.nextButton ? (
-          <div className="mb-2">
+          <div className="">
             <Button
               onClick={() =>
                 props.nextRef.current.scrollIntoView({ behavior: "smooth" })
