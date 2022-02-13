@@ -1,6 +1,5 @@
 import ScrollCard from "../components/scrollCard";
 import { useRef, createRef, useEffect } from "react";
-import ReactPlayer from "react-player";
 function dimsFromAspectRatio(width = 300, ar = 4 / 3) {
   return { height: ar * width, width };
 }
@@ -14,6 +13,12 @@ const cardData = [
     We've had so many great memories through out all this time we've known each other, 
     so I thought it'd be cute to walk down memory lane.`,
     date: new Date(),
+    gifs: [
+      { path: "/gifs/cat-love.gif" },
+      { path: "/gifs/cat-peach.gif" },
+      { path: "/gifs/iklog.gif" },
+      { path: "/gifs/dap.gif" },
+    ],
   },
   {
     title: "Our First Hangout!",
@@ -23,11 +28,17 @@ const cardData = [
     and how much fun it was talking while we painted. It was so funny how much of a trouble we went through to take 
     a polaroid pic.
     `,
+    date: new Date(2020, 11, 4),
     media: [
       { path: "/first_hangout/polaroid.jpeg" },
       { path: "/first_hangout/shelf_photo.jpeg" },
     ],
-    date: new Date(2020, 11, 4),
+    gifs: [
+      { path: "/gifs/cat-love.gif" },
+      { path: "/gifs/cat-peach.gif" },
+      { path: "/gifs/iklog.gif" },
+      { path: "/gifs/dap.gif" },
+    ],
   },
   {
     title: "I tell you I like you.",
@@ -40,6 +51,12 @@ const cardData = [
     date: new Date(2020, 11, 14),
     media: [
       { path: "/admission/admit.jpg", ...dimsFromAspectRatio(300, 19.5 / 9) },
+    ],
+    gifs: [
+      { path: "/gifs/cat-love.gif" },
+      { path: "/gifs/cat-peach.gif" },
+      { path: "/gifs/iklog.gif" },
+      { path: "/gifs/dap.gif" },
     ],
   },
   {

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Button from "./button";
-import ReactPlayer from "react-player/lazy";
+import ReactPlayer from "react-player";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLongArrowUp,
@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import { forwardRef } from "react";
+import GifOnCard from "./gifOnCard";
 
 // TODO:
 // Add all the content
@@ -23,17 +24,21 @@ export default forwardRef(function ScrollCard(props, ref) {
     >
       <div className="p-4 min-h-full bg-pink-100 border-2  border-solid border-pink-300 rounded-lg shadow-xl">
         {props.prevButton ? (
-          <div className="">
-            <Button
-              onClick={() =>
-                props.prevRef.current.scrollIntoView({ behavior: "smooth" })
-              }
-            >
-              <FontAwesomeIcon
-                icon={faLongArrowUp}
-                className="text-slate-600"
-              />
-            </Button>
+          <div className="inline-flex w-full">
+            {props.gifs ? <GifOnCard {...props.gifs[0]} /> : null}
+            <div className="flex-grow">
+              <Button
+                onClick={() =>
+                  props.prevRef.current.scrollIntoView({ behavior: "smooth" })
+                }
+              >
+                <FontAwesomeIcon
+                  icon={faLongArrowUp}
+                  className="text-slate-600"
+                />
+              </Button>
+            </div>
+            {props.gifs ? <GifOnCard {...props.gifs[1]} /> : null}
           </div>
         ) : null}
         <div className="mb-3">
@@ -91,6 +96,8 @@ export default forwardRef(function ScrollCard(props, ref) {
                       height={media.height || 400}
                       width={media.width || 300}
                       alt="Picture"
+                      priority={true}
+                      quality={100}
                     />
                   </div>
                 );
@@ -130,6 +137,8 @@ export default forwardRef(function ScrollCard(props, ref) {
                   height={props.media[0].height || 400}
                   width={props.media[0].width || 300}
                   alt="Picture"
+                  priority={true}
+                  quality={100}
                 />
               )}
             </div>
@@ -140,17 +149,21 @@ export default forwardRef(function ScrollCard(props, ref) {
         </div>
 
         {props.nextButton ? (
-          <div className="">
-            <Button
-              onClick={() =>
-                props.nextRef.current.scrollIntoView({ behavior: "smooth" })
-              }
-            >
-              <FontAwesomeIcon
-                icon={faLongArrowDown}
-                className="text-slate-600"
-              />
-            </Button>
+          <div className="inline-flex w-full">
+            {props.gifs ? <GifOnCard {...props.gifs[2]} /> : null}
+            <div className="flex-grow">
+              <Button
+                onClick={() =>
+                  props.nextRef.current.scrollIntoView({ behavior: "smooth" })
+                }
+              >
+                <FontAwesomeIcon
+                  icon={faLongArrowDown}
+                  className="text-slate-600"
+                />
+              </Button>
+            </div>
+            {props.gifs ? <GifOnCard {...props.gifs[3]} /> : null}
           </div>
         ) : null}
       </div>
