@@ -274,9 +274,15 @@ const cardData = [
     text: `Remember when you had all these assumptions of me and you thought I was
       going to be embarrassing to go out with? After like MONTHS of hooking up you finally dared to 
       go out on a real date with me HAHAHA. We got Kbbq and I talked too much and I stressed you out 
-      since we had a time limit. Whats new huh.`,
+      since we had a time limit. Whats new huh. However, after that we got our Kirby Griffin shirts and 
+      did a lil photoshoot, as well as going to the rooftop to make some real good midnight S'mores!!`,
     date: new Date(2021, 3, 23),
-    media: [{ path: "first_date/IMG_2913.MOV.mp4", type: "video" }],
+    media: [
+      { path: "first_date/IMG_2913.MOV.mp4", type: "video" },
+      { path: "/kirby_griffin/IMG_2921.MOV.mp4", type: "video"},
+      { path: "/rooftop_smores/IMG_2942.MOV.mp4", type: "video" },
+      { path: "/rooftop_smores/IMG_2944.MOV.mp4", type: "video"},
+    ],
     gifs: [
       { path: "/gifs/milk-and-mocha-cute (11).gif" },
       { path: "/gifs/cat-love.gif" },
