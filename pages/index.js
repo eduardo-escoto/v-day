@@ -9,6 +9,18 @@ const cardData = [
     I can't believe its already Valentine's Day! Time really flies. 
     We've had so many great memories through out all this time we've known each other, 
     so I thought it'd be cute to walk down memory lane.`,
+    date: "2021",
+  },
+  {
+    title: "Our First Hangout!",
+    text: `
+    I still remember how nervous and excited I was to meet you. What a fun day it was! 
+    Remember how far away from you I was the whole night? I remember thinking about how cute you were
+    and how much fun it was talking while we painted. It was so funny how much of a trouble we went through to take 
+    a polaroid pic.
+    `,
+    imagePaths: ["/test.jpeg", "/test.jpeg"],
+    date: "2020-12-06",
   },
   {
     title: "Kirby Griffin",

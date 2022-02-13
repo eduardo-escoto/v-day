@@ -11,13 +11,14 @@ import { forwardRef } from "react";
 
 // TODO:
 // Add the content and photos. Going to stick with this layout.
+// maybe go back to snap scroll and add x overflow for pics? def for now, add content and cute gifs n shit
 
 export default forwardRef(function ScrollCard(props, ref) {
   return (
     <div
       style={props.cardStyle}
       ref={ref}
-      className="border-x-2 border-y border-pink-100 max-w-md px-10 py-6 text-xl flex flex-col text-center justify-center"
+      className="border-x-2 border-y border-pink-100 max-w-md px-3 py-6 text-xl flex flex-col text-center justify-center"
       id={props.id}
     >
       <div className="min-h-full">
@@ -38,25 +39,33 @@ export default forwardRef(function ScrollCard(props, ref) {
         <div className="mb-4">
           <h1 className="text-3xl">{props.title}</h1>
         </div>
-        {props.imagePaths
-          ? props.imagePaths.map((path, idx) => (
+        {props.imagePaths ? (
+          <div className="relative w-full flex gap-6 snap-x snap-mandatory overflow-x-auto pb-10">
+            {props.imagePaths.map((path, idx) => (
               <div
                 key={idx}
-                className="max-w-sm border border-solid border-white rounded-md my-4"
+                className="snap-center shrink-0 first:pl-4 last:pr-4"
               >
                 <Image
-                  className="rounded-md"
+                  className="shrink-0 w-fit rounded-lg shadow-xl bg-white"
+                  src={path}
+                  height={400}
+                  width={300}
+                />
+                {/* <Image
+                  className=""
                   src={path}
                   width={3}
                   height={4}
                   layout="responsive"
                   quality={100}
                   alt="pic"
-                />
+                /> */}
               </div>
-            ))
-          : null}
-        <div className="text-left text-sm">
+            ))}
+          </div>
+        ) : null}
+        <div className="text-left text-sm mb-5 px-4">
           <p>{props.text}</p>
         </div>
 
