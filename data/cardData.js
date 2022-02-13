@@ -510,6 +510,37 @@ const cardData = [
     ],
   },
   {
+    title: "calista.",
+    text: (
+      <>
+        the cool crisp morning breeze <br />
+        who&apos;s haunting tendrils are enticingly stimulating <br />
+        <br />
+        the pretty pastel mix of <br />
+        oranges, <br />
+        reds, <br />
+        pinks, <br /> blues, <br />
+        that the sunset brings in tow <br/>
+        who&apos;s therapeutic views are universally loving <br/>
+        <br/>
+        the stars in the skies above who&apos;s celestial guidance could inspire 
+        ancient gods and goddesses <br/>
+        <br/>
+        the perfectly imperfect moon who&apos;s lunar rays shine upon those who yearn <br/>
+        <br />
+        of all the natural phenomena, none rival that of her existence
+      </>
+    ),
+    date: new Date(2020, 11, 20),
+    gifs: [
+      { path: "/gifs/love-mochi (1).gif" },
+      { path: "/gifs/milk-and-mocha-cute (10).gif" },
+      { path: "/gifs/iklog.gif" },
+      { path: "/gifs/milk-mocha (1).gif" },
+      { path: "/gifs/grey-cat-white-cat.gif" },
+    ],
+  },
+  {
     title: "So...",
     text: "Will u be my valentine? heh",
     gifs: [
