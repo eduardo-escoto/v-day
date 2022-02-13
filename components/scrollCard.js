@@ -40,12 +40,12 @@ export default forwardRef(function ScrollCard(props, ref) {
           <h1 className="text-3xl">{props.title}</h1>
         </div>
         {props.imagePaths ? (
-          props.imagePaths.length > 0 ? (
-            <div className="w-full flex gap-6 snap-x snap-mandatory overflow-x-auto mb-10">
+          props.imagePaths.length > 1 ? (
+            <div className="w-11/12 flex gap-6 snap-x snap-mandatory overflow-x-auto ml-auto mr-auto">
               {props.imagePaths.map((path, idx) => (
                 <div
                   key={idx}
-                  className="snap-center shrink-0 first:ml-5 last:mr-5 p-0"
+                  className="snap-center shrink-0 first:ml-10 last:mr-10 p-0"
                 >
                   <Image
                     className="shrink-0 w-fit rounded-lg shadow-xl bg-white p-0 m-0"
@@ -58,16 +58,13 @@ export default forwardRef(function ScrollCard(props, ref) {
               ))}
             </div>
           ) : (
-            <div
-              key={0}
-              // className="snap-center shrink-0 first:ml-5 last:mr-5 p-0"
-            >
+            <div key={0} className="w-full ml-auto mr-auto">
               <Image
-                // className="shrink-0 w-fit rounded-lg shadow-xl bg-white p-0 m-0"
+                className="shrink-0 w-fit rounded-lg shadow-xl p-0 m-0"
                 src={props.imagePaths[0]}
                 height={400}
                 width={300}
-                alt="Pictue"
+                alt="Picture"
               />
             </div>
           )
