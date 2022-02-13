@@ -33,7 +33,7 @@ const cardData = [
     title: "Our First Valentine's Day",
     text: "fsoidjfoi",
     // media: [{ path: "/v_day_2021/marshalls.jpeg" }],
-    media: [{ path: "/test.mov", type:'video' }],
+    media: [{ path: "/test.mov", type:'video' }, {path: "/first_hangout/shelf_photo.jpeg" }],
     date: new Date(2021, 1, 14),
   },
 ];
