@@ -45,7 +45,7 @@ export default forwardRef(function ScrollCard(props, ref) {
               {props.imagePaths.map((path, idx) => (
                 <div
                   key={idx}
-                  className="snap-center shrink-0 px-3"
+                  className="snap-center shrink-0 first:pl-3 last:pr-3"
                 >
                   <Image
                     className="shrink-0 w-fit rounded-lg"
