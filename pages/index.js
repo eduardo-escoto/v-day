@@ -36,22 +36,27 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex">
-      <div className="basis-full max-h-screen overflow-y-scroll center">
-        {cardData.map((data, idx) => (
-          <ScrollCard
-            {...data}
-            cardStyle={{ margin: "0 auto" }}
-            ref={refs.current[idx]}
-            nextRef={idx < cardData.length - 1 ? refs.current[idx + 1] : null}
-            prevRef={idx > 0 ? refs.current[idx - 1] : null}
-            nextButton={idx < cardData.length - 1}
-            prevButton={idx > 0}
-            key={idx}
-            id={idx}
-          />
-        ))}
+    <>
+      <div className="flex">
+        <div className="basis-full center">
+          {cardData.map((data, idx) => (
+            <ScrollCard
+              {...data}
+              cardStyle={{ margin: "0 auto" }}
+              ref={refs.current[idx]}
+              nextRef={idx < cardData.length - 1 ? refs.current[idx + 1] : null}
+              prevRef={idx > 0 ? refs.current[idx - 1] : null}
+              nextButton={idx < cardData.length - 1}
+              prevButton={idx > 0}
+              key={idx}
+              id={idx}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+      <div className="max-w-md  mx-auto text-center py-4 border-x-2 border-y border-pink-100">
+        <p>Made with Love by Eduardo Escoto.</p>
+      </div>
+    </>
   );
 }
