@@ -73,8 +73,9 @@ export default forwardRef(function ScrollCard(props, ref) {
               {props.media[0].type === "video" ? (
                 <ReactPlayer
                   loop={true}
-                  light={true}
+                  // light={true}
                   controls={true}
+                  playsinline={true}
                   url={props.media[0].path}
                   height={props.media[0].height || 400}
                   width={props.media[0].width || 300}
