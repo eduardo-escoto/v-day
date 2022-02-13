@@ -10,7 +10,7 @@ import {
 import { forwardRef } from "react";
 
 // TODO:
-// Add all the content 
+// Add all the content
 // Add cute gifs n shit
 
 export default forwardRef(function ScrollCard(props, ref) {
@@ -18,7 +18,7 @@ export default forwardRef(function ScrollCard(props, ref) {
     <div
       style={props.cardStyle}
       ref={ref}
-      className=" max-w-md px-3 py-6 text-xl flex flex-col text-center justify-center"
+      className=" max-w-md px-3 pt-8 text-xl flex flex-col text-center justify-center"
       id={props.id}
     >
       <div className="p-4 min-h-full bg-pink-100 border-2  border-solid border-pink-300 rounded-lg shadow-xl">
