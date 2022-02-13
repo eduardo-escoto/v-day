@@ -1,7 +1,7 @@
 import Head from "next/head";
 import ScrollCard from "../components/scrollCard";
 import { useRef, createRef, useEffect } from "react";
-import { text } from "@fortawesome/fontawesome-svg-core";
+
 function dimsFromAspectRatio(width = 300, ar = 4 / 3) {
   return { height: ar * width, width };
 }
@@ -50,8 +50,10 @@ She had so many raunchy ass jokes, but that made it real fun. We also got to eat
 ice cream while we hid from the rain! 
   `,
     date: new Date(2021, 7, 24),
-    media: [{ path: "/ali_wong/IMG_5819.MOV.mp4", type: "video" }, 
-    {path: "/ice_cream/IMG_7662.MOV.mp4", type: "video"}],
+    media: [
+      { path: "/ali_wong/IMG_5819.MOV.mp4", type: "video" },
+      { path: "/ice_cream/IMG_7662.MOV.mp4", type: "video" },
+    ],
     gifs: [
       { path: "/gifs/milk-and-mocha-cute.gif" },
       { path: "/gifs/milk-and-mocha (6).gif" },
@@ -278,7 +280,73 @@ ice cream while we hid from the rain!
       { path: "/gifs/milk-and-mocha-cute (10).gif" },
     ],
   },
-  
+  {
+    title: "Your INSANE Dave n' Busters Luck.",
+    text: `We went to Dave n' Busters and you somehow have the luck of a gambling monster.
+    You won literally like every jackpot without even trying. It was so funny hanging out with Branden 
+    and Ktsai and seeing them freak out every time you won.
+    `,
+    date: new Date(2021, 8, 24),
+    media: [
+      {
+        path: "/san_diego_trip/IMG_4335.mp4",
+        type: "video",
+        ...dimsFromAspectRatio(300, 16 / 9),
+      },
+      {
+        path: "/san_diego_trip/IMG_4331.JPG",
+        ...dimsFromAspectRatio(300, 16 / 9),
+      },
+    ],
+    gifs: [
+      { path: "/gifs/masters.gif" },
+      { path: "/gifs/milk-and-mocha-cute (9).gif" },
+      { path: "/gifs/sending-love.gif" },
+      { path: "/gifs/pat-hug.gif" },
+      { path: "/gifs/mocha-sebusun.gif" },
+    ],
+  },
+  {
+    title: "Balboa Park!",
+    text: `
+    We got pho!
+`,
+    date: new Date(2021, 8, 23),
+    media: [
+      { path: "/san_diego_trip/IMG_4262.JPEG" },
+      { path: "/san_diego_trip/IMG_4340.JPEG" },
+      { path: "/san_diego_trip/IMG_4353.JPEG" },
+      { path: "/san_diego_trip/IMG_6358.JPG" },
+      { path: "/san_diego_trip/IMG_6601.JPG" },
+    ],
+    gifs: [
+      { path: "/gifs/milk-and-mocha-cute (6).gif" },
+      { path: "/gifs/milk-bear.gif" },
+      { path: "/gifs/milk-and-mocha-cute (5).gif" },
+      { path: "/gifs/peach-cat.gif" },
+    ],
+  },
+  {
+    title: "We fly to San Diego!",
+    text: `I don't have any other pics from this on the flight or anything. But I just 
+    remember you dying when we took this video, I think saying that you really wanted to drink LOL.
+    And then we got invited to a party at Ktsai's but we were hella tired, and also feeling shitty. 
+    This was back when the Plane motion sickness didn't exist :D
+    `,
+    date: new Date(2021, 8, 16),
+    media: [
+      {
+        path: "/san_diego_trip/65355284657__964CD2A3-A45B-4A0B-B2E8-53ADA01C84B5.MP4",
+        type: "video",
+      },
+    ],
+    gifs: [
+      { path: "/gifs/more-hugs.gif" },
+      { path: "/gifs/masters.gif" },
+      { path: "/gifs/cat-love.gif" },
+      { path: "/gifs/love-mochi (1).gif" },
+    ],
+  },
   {
     title: "Our First Hangout!",
     text: `
@@ -300,17 +368,28 @@ ice cream while we hid from the rain!
     ],
   },
 
- // {
-  //  title: "Our First Valentine's Day",
-   // text: "The first time we hung out as ",
-    // media: [{ path: "/v_day_2021/marshalls.jpeg" }],
-    // media: [{ path: "/test.mov", type:'video' }, {path: "/first_hangout/shelf_photo.jpeg" }],
-    //date: new Date(2021, 1, 14),
-//  },
+  {
+    title: "Our First Valentine's Day",
+    text: `On this day, the Owl prophecy was born. Shoutout to Amy Lee
+   and all her sponsors. We met up and went to Marshalls bc we love Marshalls :D
+   `,
+    date: new Date(2021, 1, 14),
+    media: [
+      { path: "/v_day_2021/IMG_2959.JPEG" },
+      {
+        path: "/v_day_2021/63503844915__1516D3F3-6535-40A0-AB0E-C36FA04D94D2.JPEG",
+      },
+      {
+        path: "/v_day_2021/63503390053__DB5D7DFF-6E46-40DE-A88E-EC015E332BA8.MOV.mp4",
+        type: "video",
+      },
+      { path: "/v_day_2021/IMG_1475.JPEG", ...dimsFromAspectRatio(300, 3 / 4) },
+    ],
+  },
   {
     title: "So...",
-    text: "Will u be my valentine? heh"
-  }
+    text: "Will u be my valentine? heh",
+  },
 ];
 
 export default function Home() {

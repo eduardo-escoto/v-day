@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Button from "./button";
-import ReactPlayer from "react-player/lazy";
+import ReactPlayer from "react-player";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLongArrowUp,
@@ -96,7 +96,7 @@ export default forwardRef(function ScrollCard(props, ref) {
                       height={media.height || 400}
                       width={media.width || 300}
                       alt="Picture"
-                      // priority={true}
+                      priority={true}
                       quality={100}
                     />
                   </div>
@@ -137,7 +137,7 @@ export default forwardRef(function ScrollCard(props, ref) {
                   height={props.media[0].height || 400}
                   width={props.media[0].width || 300}
                   alt="Picture"
-                  // priority={true}
+                  priority={true}
                   quality={100}
                 />
               )}
