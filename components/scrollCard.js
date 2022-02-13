@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Button from "./button";
-import ReactPlayer from "react-player";
+import ReactPlayer from "react-player/lazy";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLongArrowUp,
@@ -57,12 +57,12 @@ export default forwardRef(function ScrollCard(props, ref) {
                 return media.type === "video" ? (
                   <div
                     key={idx}
-                    className="snap-center shrink-0 first:pl-4 last:pr-4"
+                    className="snap-center shrink-0 first:pl-4 last:pr-4 rounded-lg"
                   >
                     <ReactPlayer
                       loop={true}
-                      // light={true}
-                      controls={true}
+                      playing={true}
+                      muted={true}
                       playsinline={true}
                       url={media.path}
                       height={media.height || 400}
@@ -97,8 +97,8 @@ export default forwardRef(function ScrollCard(props, ref) {
               {props.media[0].type === "video" ? (
                 <ReactPlayer
                   loop={true}
-                  // light={true}
-                  controls={true}
+                  playing={true}
+                  muted={true}
                   playsinline={true}
                   url={props.media[0].path}
                   height={props.media[0].height || 400}
