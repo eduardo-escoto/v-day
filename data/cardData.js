@@ -279,15 +279,47 @@ const cardData = [
     date: new Date(2021, 3, 23),
     media: [
       { path: "first_date/IMG_2913.MOV.mp4", type: "video" },
-      { path: "/kirby_griffin/IMG_2921.MOV.mp4", type: "video"},
+      { path: "/kirby_griffin/IMG_2921.MOV.mp4", type: "video" },
+      { path: "/kirby_griffin/IMG_2933.MOV.mp4", type: "video" },
+      { path: "/kirby_griffin/IMG_2938.MOV.mp4", type: "video" },
       { path: "/rooftop_smores/IMG_2942.MOV.mp4", type: "video" },
-      { path: "/rooftop_smores/IMG_2944.MOV.mp4", type: "video"},
+      { path: "/rooftop_smores/IMG_2944.MOV.mp4", type: "video" },
     ],
     gifs: [
       { path: "/gifs/milk-and-mocha-cute (11).gif" },
       { path: "/gifs/cat-love.gif" },
       { path: "/gifs/love-mochi (1).gif" },
       { path: "/gifs/milk-and-mocha-cute (10).gif" },
+    ],
+  },
+  {
+    title: "We go Mini Golfing!",
+    text: `
+      We finally got to go to Swingers! We had our iconic mini golf date. It was alot of 
+      fun getting drunk and going around the course. You were absolutely bodying me until you sobered up hahaha.
+      I hit that hole in one and the same hole that you got a bogey and the tides immediately turned.
+      After that, we ate some good food and enjoyed a fun time together :]. We also went to cvs after.
+      `,
+    date: new Date(2021, 5, 26),
+    gifs: [
+      { path: "/gifs/transparent-milk-and-mocha.gif" },
+      { path: "/gifs/more-hugs.gif" },
+      { path: "/gifs/masters.gif" },
+      { path: "/gifs/milk-and-mocha-cute (9).gif" },
+    ],
+    media: [
+      {
+        path: "/mini_golfing/4b3b8fe3a9ba4c7db7f2449cb0a7d6fd.mov",
+        type: "video",
+        ...dimsFromAspectRatio(300, 16 / 9),
+      },
+      {
+        path: "/mini_golfing/IMG_3668.mp4",
+        type: "video",
+        ...dimsFromAspectRatio(300, 1),
+      },
+      { path: "/mini_golfing/IMG_3667.JPEG" },
+      { path: "/mini_golfing/IMG_3669.JPEG" },
     ],
   },
   {
