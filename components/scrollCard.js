@@ -58,6 +58,11 @@ export default forwardRef(function ScrollCard(props, ref) {
                   <div
                     key={idx}
                     className="snap-center shrink-0 first:pl-4 last:pr-4 rounded-lg"
+                    style={{
+                      margin: "0 auto",
+                      borderRadius: "0.5rem",
+                      overflow: "hidden",
+                    }}
                   >
                     <ReactPlayer
                       loop={true}
@@ -70,8 +75,7 @@ export default forwardRef(function ScrollCard(props, ref) {
                       className="shrink-0 w-fit rounded-lg"
                       style={{
                         margin: "0 auto",
-                        borderTopLeftRadius: "0.25rem",
-                        borderBottomLeftRadius: "0.25rem",
+                        borderRadius: "0.5rem",
                         overflow: "hidden",
                       }}
                     />
@@ -95,22 +99,30 @@ export default forwardRef(function ScrollCard(props, ref) {
           ) : (
             <div key={0} className="w-full ml-auto mr-auto">
               {props.media[0].type === "video" ? (
-                <ReactPlayer
-                  loop={true}
-                  playing={true}
-                  muted={true}
-                  playsinline={true}
-                  url={props.media[0].path}
-                  height={props.media[0].height || 400}
-                  width={props.media[0].width || 300}
-                  className="shrink-0 w-fit rounded-lg"
+                <div
+                  className="snap-center shrink-0 first:pl-4 last:pr-4 rounded-lg"
                   style={{
                     margin: "0 auto",
-                    borderTopLeftRadius: "0.25rem",
-                    borderBottomLeftRadius: "0.25rem",
+                    borderRadius: "0.5rem",
                     overflow: "hidden",
                   }}
-                />
+                >
+                  <ReactPlayer
+                    loop={true}
+                    playing={true}
+                    muted={true}
+                    playsinline={true}
+                    url={props.media[0].path}
+                    height={props.media[0].height || 400}
+                    width={props.media[0].width || 300}
+                    className="shrink-0 w-fit rounded-lg"
+                    style={{
+                      margin: "0 auto",
+                      borderRadius: "0.5rem",
+                      overflow: "hidden",
+                    }}
+                  />{" "}
+                </div>
               ) : (
                 <Image
                   className="shrink-0 w-fit rounded-lg"
