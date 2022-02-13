@@ -1,3 +1,4 @@
+import Head from "next/head";
 import ScrollCard from "../components/scrollCard";
 import { useRef, createRef, useEffect } from "react";
 function dimsFromAspectRatio(width = 300, ar = 4 / 3) {
@@ -45,9 +46,7 @@ const cardData = [
 We finally had the chance to go to a comedy show! And what better act to see than one of our faves, Ali Wong!
   `,
     date: new Date(2021, 7, 24),
-    media: [
-      { path: "/ali_wong/IMG_5819.MOV.mp4", type:"video"},
-    ],
+    media: [{ path: "/ali_wong/IMG_5819.MOV.mp4", type: "video" }],
     gifs: [
       { path: "/gifs/milk-and-mocha-cute.gif" },
       { path: "/gifs/milk-and-mocha (6).gif" },
@@ -95,7 +94,7 @@ We finally had the chance to go to a comedy show! And what better act to see tha
       { path: "/gifs/dap.gif" },
     ],
   },
-  
+
   {
     title: "Our First Valentine's Day",
     text: "The first time we hung out as ",
@@ -113,6 +112,10 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>to calista, from ed</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="flex">
         <div className="basis-full center">
           {cardData
