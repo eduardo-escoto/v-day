@@ -300,13 +300,13 @@ ice cream while we hid from the rain!
     ],
   },
 
-  {
-    title: "Our First Valentine's Day",
+ // {
+  //  title: "Our First Valentine's Day",
     text: "The first time we hung out as ",
     // media: [{ path: "/v_day_2021/marshalls.jpeg" }],
     // media: [{ path: "/test.mov", type:'video' }, {path: "/first_hangout/shelf_photo.jpeg" }],
-    date: new Date(2021, 1, 14),
-  },
+    //date: new Date(2021, 1, 14),
+//  },
   {
     title: "So...",
     text: "Will u be my valentine? heh"
