@@ -520,13 +520,14 @@ const cardData = [
         oranges, <br />
         reds, <br />
         pinks, <br /> blues, <br />
-        that the sunset brings in tow <br/>
-        who&apos;s therapeutic views are universally loving <br/>
-        <br/>
-        the stars in the skies above who&apos;s celestial guidance could inspire 
-        ancient gods and goddesses <br/>
-        <br/>
-        the perfectly imperfect moon who&apos;s lunar rays shine upon those who yearn <br/>
+        that the sunset brings in tow <br />
+        who&apos;s therapeutic views are universally loving <br />
+        <br />
+        the stars in the skies above who&apos;s celestial guidance could inspire
+        ancient gods and goddesses <br />
+        <br />
+        the perfectly imperfect moon who&apos;s lunar rays shine upon those who
+        yearn <br />
         <br />
         of all the natural phenomena, none rival that of her existence
       </>
@@ -538,6 +539,23 @@ const cardData = [
       { path: "/gifs/iklog.gif" },
       { path: "/gifs/milk-mocha (1).gif" },
       { path: "/gifs/grey-cat-white-cat.gif" },
+    ],
+  },
+  {
+    title: "Moving out :(",
+    text: `
+    I pack all my things and 
+    `,
+    date: new Date(2021, 11, 13),
+    media: [
+      { path: "/moving_out/IMG_8131.JPG" },
+      { path: "/moving_out/IMG_2735.JPEG", ...dimsFromAspectRatio(300, 3 / 4) },
+    ],
+    gifs: [
+      { path: "/gifs/love-mochi.gif" },
+      { path: "/gifs/milk-and-mocha-cute (12).gif" },
+      { path: "/gifs/milk-and-mocha-cute (3).gif" },
+      { path: "/gifs/love-milk-and-mocha.gif" },
     ],
   },
   {
