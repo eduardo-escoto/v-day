@@ -13,7 +13,9 @@ export default function GifOnCard(props) {
       //   height: props.height || "50px"
       // }}
     >
-      <Image src={props.path} height={props.height || 50} width={props.width || 50} alt="gif" priority={true} />
+      <Image src={props.path} height={props.height || 50} width={props.width || 50} alt="gif" 
+      // priority={true}
+       />
     </div>
   );
 }
